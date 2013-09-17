@@ -48,10 +48,14 @@ What We Do
 Why Existing Test Tools Suck
 ============================
 
-
+----
 
 Pynamite
 ========
+
+*If your application is not broken you're not using enough Pynamite!*
+
+----
 
 Ideas borrowed from
 -------------------
@@ -61,9 +65,6 @@ Ideas borrowed from
 * Erlang OTP (process management, messaging, let it crash and restart it, isolated processes)
 
 * Python Web Frameworks (project scaffolding and packaging, dev server/runner)
-
-
-
 
 
 ----
