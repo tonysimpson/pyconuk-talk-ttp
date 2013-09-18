@@ -1,0 +1,47 @@
+@import url(http://fonts.googleapis.com/css?family=Lato|Allura|Ubuntu);
+
+
+body {
+    font-size: 150%;
+    /* text-align: center; */
+    font-family: Lato;
+    color: #ffffff;
+    background: #26323b;
+}
+
+p {
+    font-size: 125%;
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+}
+
+em {
+    font-family: Allura;
+}
+
+strong {
+    font-family: Ubuntu;
+}
+
+h1, h2, h3, h4 {
+    color: #fdba31;
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+}
+
+li {
+    font-size: 125%;
+    font-weight: normal;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    padding-left: 0.3em;
+    line-height: 1.8em;
+    list-style-type: disc;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
