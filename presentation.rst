@@ -21,7 +21,7 @@ github.com/tonysimpson
 About The Test People
 =====================
 
-* Testing consultancy based in Yorkshire (offices Leeds, London, Gibraltar).
+* Testing consultancy based in Yorkshire (offices Leeds, Londonhovercarft imclude , Gibraltar).
 
 * Company prides itself on its innovation and technical delivery.
 
@@ -45,8 +45,8 @@ What We Do
 
 ----
 
-Why Existing Test Tools Suck
-============================
+Something about existing tools??
+================================
 
 ----
 
@@ -57,7 +57,7 @@ Pynamite
 
 ----
 
-Ideas borrowed from
+Ideas Borrowed From
 -------------------
 
 * Flask (extension mechanism)
@@ -66,6 +66,47 @@ Ideas borrowed from
 
 * Python Web Frameworks (project scaffolding and packaging, dev server/runner)
 
+----
+
+What Does It Alow Us To Do
+--------------------------
+
+* Video Streaming
+* Warehouse Management Systems
+* Legacy Applications
+* Flash and Silverlight
+* Data Warehouse Infrastructure
+* Network Attached Devices
+* Uncommon and Bespoke Protocols
+
+----
+
+.. image:: static/transactions.png
+    :height: 600px
+    :width: 900px
+
+----
+
+.. image:: static/transactions_big.png
+    :height: 600px
+    :width: 900px
+
+----
+
+Key Libraries And Technology
+----------------------------
+
+* ZeroMQ
+* Boto
+* IPython Notebook
+* Matplotlib
+* Docopt
+* Paramiko
+
+----
+
+Geist
+=====
 
 ----
 
