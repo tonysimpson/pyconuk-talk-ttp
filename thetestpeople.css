@@ -1,9 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Lato|Allura|Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Lato|Cantarell|Ubuntu);
 
 
 body {
     font-size: 150%;
-    /* text-align: center; */
     font-family: Lato;
     color: #ffffff;
     background: #26323b;
@@ -17,7 +16,7 @@ p {
 }
 
 em {
-    font-family: Allura;
+    font-family: Cantarell;
 }
 
 strong {

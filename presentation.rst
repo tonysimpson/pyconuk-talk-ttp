@@ -1,6 +1,6 @@
 :title: Breaking Things For Money
 :data-transition-duration: 500
-:css: hovercraft.css
+:css: thetestpeople.css
 
 
 About Me
@@ -25,7 +25,7 @@ About The Test People
 
 * Company prides itself on its innovation and technical delivery.
 
-* #44 on the 'Sunday Times Tech Track 100 2013', *#1 in Yorkshire*.
+* #44 on the 'Sunday Times Tech Track 100 2013', **#1 in Yorkshire**.
 
 @thetestpeople
 
@@ -110,6 +110,74 @@ Geist
 
 ----
 
+:data-rotate: 20000
+
+
+Gawker - Simple Screen OCR (Outdated)
+-------------------------------------
+
+.. raw:: html
+
+    <video controls>
+      <source src="static/capturepricefeed1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+
+----
+
+Numpy - Ancient Technology
+--------------------------
+
+.. image:: static/stargate.jpg
+    :height: 393px
+    :width: 700px
+
+* Once you've learnt the symbols it is imensly powerful
+
+
+----
+
+A Python In Every Proces
+========================
+
+
+.. code:: python
+
+    DIGIT_MAP = {i:j for i,j in zip('0123456789','6514798023')}
+
+    SET_WINDOW_TEXT_A = """
+    BOOL WINAPI SetWindowTextA(
+      _In_      HWND hWnd,
+      _In_opt_  LPCSTR lpString
+    );
+    """
+
+    @hook(ctypes.windll.user32, SET_WINDOW_TEXT_A)
+    def SetWindowTextA(hWnd, lpString):
+        text = ''.join([c if not c.isdigit() else DIGIT_MAP[c] for c in lpString])
+        print("Got %r using %r" % (lpString,text))
+        return SetWindowTextA.unhooked(hWnd, text)
+
+----
+
+Calculator Demo
+---------------
+
+.. raw:: html
+
+    <video controls>
+        <source src="static/wrongulator.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+
+
+----
+
+
+
 *END*
+
+
+
 
 
