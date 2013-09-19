@@ -110,6 +110,16 @@ Geist
 
 ----
 
+
+----
+
+Sikuli and Xpresser use OpenCV `matchTemplate` with CV_TM_CCOEFF_NORMED
+
+
+Convolution on Wikipedia [http://en.wikipedia.org/wiki/Convolution]
+
+----
+
 :data-rotate: 20000
 
 
