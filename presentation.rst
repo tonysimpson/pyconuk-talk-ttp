@@ -42,18 +42,13 @@ What We Do
 
 * Agile and CI/CD consultancy.
 
-
-----
-
-Something about existing tools??
-================================
-
 ----
 
 Pynamite
 ========
 
 *If your application is not broken you're not using enough Pynamite!*
+
 
 ----
 
@@ -115,13 +110,9 @@ Geist
 
 Sikuli and Xpresser use OpenCV `matchTemplate` with CV_TM_CCOEFF_NORMED
 
-
 Convolution on Wikipedia [http://en.wikipedia.org/wiki/Convolution]
 
 ----
-
-:data-rotate: 20000
-
 
 Gawker - Simple Screen OCR (Outdated)
 -------------------------------------
@@ -150,6 +141,7 @@ Numpy - Ancient Technology
 A Python In Every Proces
 ========================
 
+----
 
 .. code:: python
 
@@ -180,14 +172,8 @@ Calculator Demo
         Your browser does not support the video tag.
     </video>
 
-
 ----
 
 
 
 *END*
-
-
-
-
-
