@@ -211,7 +211,7 @@ Gawker is a "poor mans OCR" - bitmap based character matching
 .. raw:: html
 
     <video controls>
-      <source src="static/capturepricefeed1.mp4" type="video/mp4">
+      <source src="static/capturepricefeed1.webm" type="video/webm">
     Your browser does not support the video tag.
     </video>
 
@@ -304,8 +304,10 @@ Both good tools
 Sikuli and Xpresser use OpenCV `matchTemplate` with CV_TM_CCOEFF_NORMED
 
 .. image:: static/opencvmath1.png
-    :height: 600px
-    :width: 900px
+    :height: 50px
+
+.. image:: static/opencvmath2.png
+    :height: 50px
 
 .. note::
 
@@ -546,6 +548,7 @@ Python Injection
  * We then run ``Py_Initialize()``
  * And run ``PyRun_SimpleScript()``, passing script name.
 
+----
 
 Function Hooking
 ================
@@ -554,6 +557,7 @@ Function Hooking
 * Other approaches possible too.
 * CTypes has support for generating function pointers from python functions.
 
+----
 
 .. code:: python
 
@@ -585,7 +589,5 @@ Calculator Demo
     </video>
 
 ----
-
-
 
 *END*
