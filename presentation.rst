@@ -105,8 +105,117 @@ Geist
 
 ----
 
+Playing With FFTs
+-----------------
 
 ----
+
+Picture Of Peter From My Computer
+---------------------------------
+
+.. image:: static/peter.jpg
+    :height: 600px
+
+----
+
+Take Peter
+----------
+
+.. image:: static/peter.png
+    :height: 600px
+
+----
+
+And Correlate Him With A Point
+------------------------------
+
+.. image:: static/single_pixel.png
+    :height: 600px
+
+----
+
+Single Peter
+------------
+
+.. image:: static/single_peter.png
+    :height: 600px
+
+----
+
+.. code:: python
+
+    import numpy
+    from numpy.fft import rfft2, irfft2
+    from PIL import Image
+
+    peter_grey = numpy.array(Image.open('static/peter.png')).astype(numpy.float64) / 255
+
+    width, height = 200, 200
+    single_pixel = numpy.zeros((height, width), numpy.float64)
+    single_pixel[22, 36] = 1
+
+    single_peter = irfft2(rfft2(single_pixel) * rfft2(peter_grey, single_pixel.shape))
+
+
+----
+
+A Lot Of Points Equals A Lot Of Peters
+--------------------------------------
+
+.. image:: static/lots_of_peter.png
+    :height: 600px
+
+----
+
+.. code:: python
+
+    width, height = 2000, 2000
+    lots_of_pixels = numpy.zeros((height, width), numpy.float64)
+    lots_of_pixels[zip(*[(random.randint(0, width-1),
+                   random.randint(0, width-1)) for i in range(40)])] = 1
+    lots_of_peter = irfft2(rfft2(lots_of_pixels) * rfft2(peter_grey,
+                                                         lots_of_pixels.shape))
+
+----
+
+Convolution
+-----------
+
+.. code:: python
+
+    single_conv = irfft2(rfft2(single_peter) * rfft2(peter_grey[::-1, ::-1],
+                                                     single_peter.shape))
+    found_single_peter = single_conv > (single_conv.max() * 0.98)
+
+.. image:: static/found_single_peter.png
+    :height: 400px
+
+----
+
+
+.. code:: python
+
+    lots_conv = irfft2(rfft2(lots_of_peter) * rfft2(peter_grey[::-1, ::-1],
+                                                    lots_of_peter.shape))
+    found_lots_of_peter = lots_conv > (single_conv.max() * 0.98)
+
+----
+
+.. image:: static/found_lots_of_peters.png
+    :height: 600px
+
+----
+
+.. image:: static/lots_of_peter.png
+    :height: 600px
+
+----
+
+To get round the problems of FFT based convolution you need to investigate edge
+detection and image thresholding - but that's a much longer talk.
+
+----
+
 
 Sikuli and Xpresser use OpenCV `matchTemplate` with CV_TM_CCOEFF_NORMED
 
