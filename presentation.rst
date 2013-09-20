@@ -283,22 +283,166 @@ Geist
 
 ----
 
+The State of the (open source) Art
+==================================
+
+* Sikuli
+* Expresser
+
+Both good tools
+
+.. note::
+
+  * Previously aware of Sikuli and Expresser
+  * Both use OpenCV for image matching
+  * OpenCV is a fantastic, mathsy, black box.
+  * Expresser and sikuli use the templateMatch() function from openCV.  Here’s
+    the documentation.
+
+----
 
 Sikuli and Xpresser use OpenCV `matchTemplate` with CV_TM_CCOEFF_NORMED
 
-Convolution on Wikipedia [http://en.wikipedia.org/wiki/Convolution]
-
-----
-
-.. image:: static/
+.. image:: static/opencvmath1.png
     :height: 600px
     :width: 900px
 
+.. note::
 
-A Python In Every Proces
-========================
+ * To get things done quickly we need easy debugging, which means we
+   need understanding
+ * So we hired a maths graduate.
+ * Adam!  What does this mean?
+ * Failing understanding, we'll settle for intuition
 
 ----
+
+Digression: How do you write a Where's Wally program
+====================================================
+
+Convolution on Wikipedia [http://en.wikipedia.org/wiki/Convolution]
+
+.. note::
+
+ * Template matching usually uses something called the convolution theorem.
+ * Convolution: [switch to Wikipedia] maths… maths… maths… Ah… intuition.
+ * Convoluton “slides” one function over another, and gives a measure
+   of their how much they intersect at each position.
+
+   * So matches are at maxima.
+   * Kinda easy to see how this would be relevant
+   * If images were functions
+   * Sounds slow though
+
+* The convolution theorm basically says there's a cheap way to do this
+  using FFTs.
+
+----
+
+Implementation
+==============
+
+* NumPy
+* IPython Notebook
+* CTypes with Win32
+* Matplotlib
+* NumPy
+* PIL
+* Leeds brewery Midnight Bell and Saltaire Blonde
+* Whiteboard
+
+----
+
+Case Study
+==========
+
+The problem:
+
+* Large performance test of a trading system
+* Hairy Flash based application
+* Custom widget set
+* Only really works in Internet Explorer (8)
+
+----
+
+
+Case Study
+==========
+
+Approach:
+
+* Library of image finding code (Geist)
+* Python bindings for some useful Win32 functions (for typing, clicking etc.)
+* Database of template images - unit tested against known screenshots
+* "OCR" for reading values (Gawker)
+* Nice straightforward scripts written in Python
+* Pynamite
+* Hundreds of Windows EC2 instances
+
+----
+
+Case Study
+==========
+
+Result:
+
+* Happy customer
+* Good engagement
+* More work - for other parts of TTP
+
+
+----
+
+A Python In Every Process
+=========================
+
+*The tool that we may or may not decide to call huk*
+
+.. note::
+
+ * Last test was a success, but leaves a lot of questions unanswered
+ * Really want to "see" messages being sent
+ * Just one Problem...
+ * The messaging is encrypted.
+ * The "standard" solution: Proxy server
+ * But proxies suck
+ * Plan B: Be inside Internet Explorer.
+
+----
+
+DLL Injection
+=============
+
+* Get handle for process
+* Allocate memory within address space of process
+* Write DLL name into memory
+* Start new thread, running LoadLibrary function, passing name as argument.
+
+Amazingly this works
+
+.. note::
+
+ * Fairly standard trick
+ * Lots of websites with green text on black backgrounds mention it.
+ * What's novel is the  The DLL we used...
+
+----
+
+Python Injection
+================
+
+ * Inject Python27.dll
+ * We then run ``Py_Initialize()``
+ * And run ``PyRun_SimpleScript()``, passing script name.
+
+
+Function Hooking
+================
+
+* Making use of Windows hot patching mechanism for now
+* Other approaches possible too.
+* CTypes has support for generating function pointers from python functions.
+
 
 .. code:: python
 
